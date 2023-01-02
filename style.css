@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,400&display=swap');
 
 *{
     font-family: 'Poppins', sans-serif;
@@ -182,10 +182,10 @@ cursor: pointer;
     color: yellow;
 }
 
-.pie{
+footer{
     width: 100vw;
-    border-radius: 12px;
-    background-image: linear-gradient(#0A3871,#b3040a);
+    font-weight:normal;
+    font-stretch: expanded;
     text-align: center;
-    color: white;
+    color: #7a0206;
 }
