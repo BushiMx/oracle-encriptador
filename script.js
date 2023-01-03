@@ -36,7 +36,7 @@ function encriptar() {
         .replaceAll('o', 'ober')
         .replaceAll('u', 'ufat');
 
-        document.getElementById("aviso").innerHTML = cifrado;
+    document.getElementById("aviso").innerHTML = cifrado;
     
     /*Escribir si es encriptado o desencriptado*/
     y="Mensaje Encriptado"
@@ -44,18 +44,12 @@ function encriptar() {
 }
 
 function desencriptar() {
-    /*Oculta la imagen de la encriptacion*/
-    document.getElementById("imagen").style.display = "none";
-    
-    /*Activa el boton copiar*/
-    document.getElementById('btn-copiar').style.display = 'block'
-    
     /*Desencriptar mensaje*/
-    cifrado = mensaje.replaceAll('enter', "e")
-        .replaceAll('imes', 'i')
-        .replaceAll('ai', 'a')
-        .replaceAll('ober', 'o')
-        .replaceAll('ufat', 'u');
+    cifrado = mensaje.replaceAll('ai', 'a')
+        .replaceAll('enter/g', "e")
+        .replaceAll('imes/g', 'i')
+        .replaceAll('ober/g', 'o')
+        .replaceAll('ufat/g', 'u');
 
         document.getElementById("aviso").innerHTML = cifrado;
                 
@@ -71,12 +65,13 @@ function copiar(){
     document.body.append(textArea);       
     textArea.select();       
     document.execCommand("copy");       
-    textArea.remove() 
-    alert("El mensaje encriptado ha sido copiado")
+    textArea.remove(); 
+    alert("El mensaje encriptado ha sido copiado");
+    document.getElementById('texto').value = "";
 }
 
 
-<!-- Code injected by live-server -->
+//<!-- Code injected by live-server -->
 
 // <![CDATA[  <-- For SVG support
 if ('WebSocket' in window) {
